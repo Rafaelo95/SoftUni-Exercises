@@ -1,0 +1,21 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block page_styles %}
+    <link rel="stylesheet" href="{% static 'css/gamescss.css' %}"/>
+{% endblock %}
+
+{% block site_title %}
+    Games page
+{% endblock %}
+
+{%  block site_main_content %}
+    <h1>Games</h1>
+    <ul>
+        {% for game in object_list %}
+            <li>
+                {{ game.name }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
